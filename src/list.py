@@ -29,6 +29,7 @@ sys.stderr.write(platform.python_version())
 
 f_path = Tools.getEnv('path')
 ws_home = f_path if f_path else os.path.expanduser(Tools.getEnv('workspaces_home'))
+p_path = str(PurePath(f_path).parent) if f_path and f_path != Tools.getEnv('workspaces_home') else str()
 
 query = Tools.getArgv(1)
 if query == str():
@@ -37,6 +38,13 @@ else:
     it = sorted(get_files(ws_home))
 
 wf = Items()
+if p_path:
+    wf.setItem(
+        title='Back',
+        arg=p_path
+    )
+    wf.setIcon(m_path='back.png', m_type='image')
+    wf.addItem()
 if len(it) > 0:
     for i in it:
         if (query == str() or query.lower() in PurePath(i).stem.lower()) and not(os.path.basename(i).startswith('.')):

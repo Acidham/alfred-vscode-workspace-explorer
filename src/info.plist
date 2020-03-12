@@ -296,7 +296,7 @@ Set workspaces_home e.g. to /Users/user/vscode-workspaces</string>
 		<key>1E4C47DC-9E0D-4CA7-9C58-BDBCAEBAFD19</key>
 		<dict>
 			<key>xpos</key>
-			<integer>475</integer>
+			<integer>450</integer>
 			<key>ypos</key>
 			<integer>245</integer>
 		</dict>
@@ -317,7 +317,7 @@ Set workspaces_home e.g. to /Users/user/vscode-workspaces</string>
 		<key>6DBBB615-498F-4D84-9571-CB42B2B6718A</key>
 		<dict>
 			<key>xpos</key>
-			<integer>640</integer>
+			<integer>615</integer>
 			<key>ypos</key>
 			<integer>265</integer>
 		</dict>
@@ -331,7 +331,7 @@ Set workspaces_home e.g. to /Users/user/vscode-workspaces</string>
 		<key>F0F34B2F-091A-49DB-9E4D-B5D867B31A9E</key>
 		<dict>
 			<key>xpos</key>
-			<integer>475</integer>
+			<integer>450</integer>
 			<key>ypos</key>
 			<integer>420</integer>
 		</dict>
@@ -360,7 +360,7 @@ Set workspaces_home e.g. to /Users/user/vscode-workspaces</string>
 		<string>workspaces_home</string>
 	</array>
 	<key>version</key>
-	<string>0.9</string>
+	<string>0.9.1</string>
 	<key>webaddress</key>
 	<string></string>
 </dict>
