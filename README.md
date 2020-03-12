@@ -2,7 +2,7 @@
 
 Alfred workfow to search, expore and open VSCode workspaces. 
 
-## Requiremens
+## Requirements
 
 * Python 3
 * VSCode
