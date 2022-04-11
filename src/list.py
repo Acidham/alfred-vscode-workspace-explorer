@@ -1,11 +1,11 @@
-#!/usr/bin/env python3
+#!/usr/bin/python3
 
 import os
 import platform
 import sys
 from pathlib import PurePath
 
-from Alfred import Items, Tools
+from Alfred3 import Items, Tools
 
 
 def get_files(r_path):

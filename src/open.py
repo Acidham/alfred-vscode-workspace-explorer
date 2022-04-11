@@ -1,9 +1,9 @@
-#!/usr/bin/python
+#!/usr/bin/python3
 
 import os
 import sys
 
-from Alfred import Tools
+from Alfred3 import Tools
 
 f_path = Tools.getEnv('path')
 
