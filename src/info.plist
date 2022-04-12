@@ -8,6 +8,8 @@
 	<string>Dev</string>
 	<key>connections</key>
 	<dict>
+		<key>19227C80-9B92-4F90-8AC6-6841FBA1DCAC</key>
+		<array/>
 		<key>1E4C47DC-9E0D-4CA7-9C58-BDBCAEBAFD19</key>
 		<array>
 			<dict>
@@ -142,13 +144,13 @@
 				<key>escaping</key>
 				<integer>102</integer>
 				<key>script</key>
-				<string>./py3.sh open.py "$1"</string>
+				<string>./py3.sh open.py</string>
 				<key>scriptargtype</key>
 				<integer>1</integer>
 				<key>scriptfile</key>
 				<string>open.py</string>
 				<key>type</key>
-				<integer>5</integer>
+				<integer>8</integer>
 			</dict>
 			<key>type</key>
 			<string>alfred.workflow.action.script</string>
@@ -278,6 +280,23 @@
 		<dict>
 			<key>config</key>
 			<dict>
+				<key>argument</key>
+				<string>'{query}', {allvars}</string>
+				<key>cleardebuggertext</key>
+				<false/>
+				<key>processoutputs</key>
+				<true/>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.utility.debug</string>
+			<key>uid</key>
+			<string>19227C80-9B92-4F90-8AC6-6841FBA1DCAC</string>
+			<key>version</key>
+			<integer>1</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
 				<key>path</key>
 				<string>{query}</string>
 			</dict>
@@ -295,6 +314,13 @@
 Set workspaces_home e.g. to /Users/user/vscode-workspaces</string>
 	<key>uidata</key>
 	<dict>
+		<key>19227C80-9B92-4F90-8AC6-6841FBA1DCAC</key>
+		<dict>
+			<key>xpos</key>
+			<integer>615</integer>
+			<key>ypos</key>
+			<integer>375</integer>
+		</dict>
 		<key>1E4C47DC-9E0D-4CA7-9C58-BDBCAEBAFD19</key>
 		<dict>
 			<key>xpos</key>
@@ -362,7 +388,7 @@ Set workspaces_home e.g. to /Users/user/vscode-workspaces</string>
 		<string>workspaces_home</string>
 	</array>
 	<key>version</key>
-	<string>0.9.2</string>
+	<string>0.9.3</string>
 	<key>webaddress</key>
 	<string></string>
 </dict>
