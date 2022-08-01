@@ -3,13 +3,11 @@
 <plist version="1.0">
 <dict>
 	<key>bundleid</key>
-	<string>com.afred.acidham.vccode</string>
+	<string>com.alfred.acidham.vccode</string>
 	<key>category</key>
 	<string>Dev</string>
 	<key>connections</key>
 	<dict>
-		<key>19227C80-9B92-4F90-8AC6-6841FBA1DCAC</key>
-		<array/>
 		<key>1E4C47DC-9E0D-4CA7-9C58-BDBCAEBAFD19</key>
 		<array>
 			<dict>
@@ -65,6 +63,16 @@
 		<array>
 			<dict>
 				<key>destinationuid</key>
+				<string>A0CE7327-1CF8-45D3-97C5-E4BE466D5045</string>
+				<key>modifiers</key>
+				<integer>0</integer>
+				<key>modifiersubtext</key>
+				<string></string>
+				<key>vitoclose</key>
+				<false/>
+			</dict>
+			<dict>
+				<key>destinationuid</key>
 				<string>FAB606CA-AF3E-4839-83BB-64BE1710BF6E</string>
 				<key>modifiers</key>
 				<integer>0</integer>
@@ -111,10 +119,33 @@
 		<dict>
 			<key>config</key>
 			<dict>
+				<key>concurrently</key>
+				<false/>
+				<key>escaping</key>
+				<integer>102</integer>
+				<key>script</key>
+				<string>./AlfredWorkflowUpdater "Acidham/alfred-vscode-workspace-explorer" "1"</string>
+				<key>scriptargtype</key>
+				<integer>1</integer>
+				<key>scriptfile</key>
+				<string></string>
+				<key>type</key>
+				<integer>5</integer>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.action.script</string>
+			<key>uid</key>
+			<string>A0CE7327-1CF8-45D3-97C5-E4BE466D5045</string>
+			<key>version</key>
+			<integer>2</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
 				<key>openwith</key>
 				<string>/Applications/Visual Studio Code.app</string>
 				<key>sourcefile</key>
-				<string>{var:path}</string>
+				<string>{var:mypath}</string>
 			</dict>
 			<key>type</key>
 			<string>alfred.workflow.action.openfile</string>
@@ -122,19 +153,6 @@
 			<string>69ED09D1-D034-4CEE-8A72-742ADCC2F5DB</string>
 			<key>version</key>
 			<integer>3</integer>
-		</dict>
-		<dict>
-			<key>config</key>
-			<dict>
-				<key>triggerid</key>
-				<string>*ifdir</string>
-			</dict>
-			<key>type</key>
-			<string>alfred.workflow.trigger.external</string>
-			<key>uid</key>
-			<string>6D127197-9285-4404-AEBE-1F4D32B3B721</string>
-			<key>version</key>
-			<integer>1</integer>
 		</dict>
 		<dict>
 			<key>config</key>
@@ -162,6 +180,21 @@
 		<dict>
 			<key>config</key>
 			<dict>
+				<key>availableviaurlhandler</key>
+				<false/>
+				<key>triggerid</key>
+				<string>*ifdir</string>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.trigger.external</string>
+			<key>uid</key>
+			<string>6D127197-9285-4404-AEBE-1F4D32B3B721</string>
+			<key>version</key>
+			<integer>1</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
 				<key>alfredfiltersresults</key>
 				<false/>
 				<key>alfredfiltersresultsmatchmode</key>
@@ -183,11 +216,13 @@
 				<key>queuedelaymode</key>
 				<integer>0</integer>
 				<key>queuemode</key>
-				<integer>1</integer>
+				<integer>2</integer>
 				<key>runningsubtext</key>
 				<string></string>
 				<key>script</key>
-				<string>./py3.sh list.py "$1"</string>
+				<string>query=$1
+
+./py3.sh list.py "$query"</string>
 				<key>scriptargtype</key>
 				<integer>1</integer>
 				<key>scriptfile</key>
@@ -230,6 +265,8 @@
 				</array>
 				<key>elselabel</key>
 				<string>DIR</string>
+				<key>hideelse</key>
+				<false/>
 			</dict>
 			<key>type</key>
 			<string>alfred.workflow.utility.conditional</string>
@@ -247,7 +284,7 @@
 				<false/>
 				<key>variables</key>
 				<dict>
-					<key>path</key>
+					<key>mypath</key>
 					<string>{query}</string>
 				</dict>
 			</dict>
@@ -280,23 +317,6 @@
 		<dict>
 			<key>config</key>
 			<dict>
-				<key>argument</key>
-				<string>'{query}', {allvars}</string>
-				<key>cleardebuggertext</key>
-				<false/>
-				<key>processoutputs</key>
-				<true/>
-			</dict>
-			<key>type</key>
-			<string>alfred.workflow.utility.debug</string>
-			<key>uid</key>
-			<string>19227C80-9B92-4F90-8AC6-6841FBA1DCAC</string>
-			<key>version</key>
-			<integer>1</integer>
-		</dict>
-		<dict>
-			<key>config</key>
-			<dict>
 				<key>path</key>
 				<string>{query}</string>
 			</dict>
@@ -307,88 +327,129 @@
 			<key>version</key>
 			<integer>1</integer>
 		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>argument</key>
+				<string>'{query}', {variables}</string>
+				<key>cleardebuggertext</key>
+				<false/>
+				<key>processoutputs</key>
+				<true/>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.utility.debug</string>
+			<key>uid</key>
+			<string>6B3799D0-47A0-43A7-9A71-DA84803C6304</string>
+			<key>version</key>
+			<integer>1</integer>
+		</dict>
 	</array>
 	<key>readme</key>
 	<string>Explore/open VSCode Workspaces
 
-Set workspaces_home e.g. to /Users/user/vscode-workspaces</string>
+# VSCode Workspace Explorer
+
+Search&amp;Browser VS Code Workspaces</string>
 	<key>uidata</key>
 	<dict>
-		<key>19227C80-9B92-4F90-8AC6-6841FBA1DCAC</key>
-		<dict>
-			<key>xpos</key>
-			<integer>615</integer>
-			<key>ypos</key>
-			<integer>375</integer>
-		</dict>
 		<key>1E4C47DC-9E0D-4CA7-9C58-BDBCAEBAFD19</key>
 		<dict>
 			<key>xpos</key>
-			<integer>450</integer>
+			<real>550</real>
 			<key>ypos</key>
-			<integer>245</integer>
+			<real>245</real>
 		</dict>
 		<key>69ED09D1-D034-4CEE-8A72-742ADCC2F5DB</key>
 		<dict>
 			<key>xpos</key>
-			<integer>745</integer>
+			<real>845</real>
 			<key>ypos</key>
-			<integer>175</integer>
+			<real>175</real>
+		</dict>
+		<key>6B3799D0-47A0-43A7-9A71-DA84803C6304</key>
+		<dict>
+			<key>xpos</key>
+			<real>595</real>
+			<key>ypos</key>
+			<real>550</real>
 		</dict>
 		<key>6D127197-9285-4404-AEBE-1F4D32B3B721</key>
 		<dict>
 			<key>xpos</key>
-			<integer>10</integer>
+			<real>85</real>
 			<key>ypos</key>
-			<integer>245</integer>
+			<real>250</real>
 		</dict>
 		<key>6DBBB615-498F-4D84-9571-CB42B2B6718A</key>
 		<dict>
 			<key>xpos</key>
-			<integer>615</integer>
+			<real>715</real>
 			<key>ypos</key>
-			<integer>265</integer>
+			<real>265</real>
 		</dict>
 		<key>72D88578-E25F-46FB-A5F2-C8DDFDAAF29A</key>
 		<dict>
 			<key>xpos</key>
-			<integer>195</integer>
+			<real>285</real>
 			<key>ypos</key>
-			<integer>245</integer>
+			<real>250</real>
+		</dict>
+		<key>A0CE7327-1CF8-45D3-97C5-E4BE466D5045</key>
+		<dict>
+			<key>xpos</key>
+			<real>530</real>
+			<key>ypos</key>
+			<real>45</real>
 		</dict>
 		<key>F0F34B2F-091A-49DB-9E4D-B5D867B31A9E</key>
 		<dict>
 			<key>xpos</key>
-			<integer>450</integer>
+			<real>550</real>
 			<key>ypos</key>
-			<integer>420</integer>
+			<real>420</real>
 		</dict>
 		<key>F6A299C3-A9B5-447F-8280-A0F821D0C66D</key>
 		<dict>
 			<key>xpos</key>
-			<integer>745</integer>
+			<real>845</real>
 			<key>ypos</key>
-			<integer>305</integer>
+			<real>305</real>
 		</dict>
 		<key>FAB606CA-AF3E-4839-83BB-64BE1710BF6E</key>
 		<dict>
 			<key>xpos</key>
-			<integer>380</integer>
+			<real>480</real>
 			<key>ypos</key>
-			<integer>275</integer>
+			<real>275</real>
 		</dict>
 	</dict>
-	<key>variables</key>
-	<dict>
-		<key>workspaces_home</key>
-		<string></string>
-	</dict>
-	<key>variablesdontexport</key>
+	<key>userconfigurationconfig</key>
 	<array>
-		<string>workspaces_home</string>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>default</key>
+				<string></string>
+				<key>filtermode</key>
+				<integer>1</integer>
+				<key>required</key>
+				<true/>
+			</dict>
+			<key>description</key>
+			<string>Viscual Studio Code Workspace Folder</string>
+			<key>label</key>
+			<string>VS Code Workspaces</string>
+			<key>type</key>
+			<string>filepicker</string>
+			<key>variable</key>
+			<string>workspaces_home</string>
+		</dict>
 	</array>
+	<key>variablesdontexport</key>
+	<array/>
 	<key>version</key>
-	<string>0.9.3</string>
+	<string>0.9.5</string>
 	<key>webaddress</key>
 	<string></string>
 </dict>

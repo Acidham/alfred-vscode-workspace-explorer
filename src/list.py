@@ -25,9 +25,11 @@ def get_dirs(r_path):
     return dir_list
 
 
-sys.stderr.write(platform.python_version())
+Tools.logPyVersion()
 
-f_path = Tools.getEnv('path')
+f_path = Tools.getEnv('mypath')
+# TODO: Debugging line below
+Tools.log(f"this is f_path: {f_path}")
 ws_home = f_path if f_path else os.path.expanduser(Tools.getEnv('workspaces_home'))
 p_path = str(PurePath(f_path).parent) if f_path and f_path != Tools.getEnv('workspaces_home') else str()
 
@@ -47,13 +49,15 @@ if p_path:
     wf.addItem()
 if len(it) > 0:
     for i in it:
+        # TODO: Remove just for debugging
+        pp = PurePath(i).stem.lower()
         if (query == str() or query.lower() in PurePath(i).stem.lower()) and not(os.path.basename(i).startswith('.')):
             ic = 'folder.png' if os.path.isdir(i) else 'workspace.png'
             sub = 'Folder' if os.path.isdir(i) else "Workspace in VSCode"
             title = os.path.basename(i).replace('.code-workspace', '')
             wf.setItem(
                 title=title,
-                subtitle=u'\u23CE to open {0}'.format(sub),
+                subtitle=f'\u23CE to open {sub}',
                 arg=i
             )
             wf.setIcon(m_path=ic, m_type='image')

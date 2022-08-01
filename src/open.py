@@ -5,7 +5,7 @@ import sys
 
 from Alfred3 import Tools
 
-f_path = Tools.getEnv('path')
+f_path = Tools.getEnv('mypath')
 
 if os.path.isdir(f_path):
     sys.stdout.write("DIR")
