@@ -63,16 +63,6 @@
 		<array>
 			<dict>
 				<key>destinationuid</key>
-				<string>A0CE7327-1CF8-45D3-97C5-E4BE466D5045</string>
-				<key>modifiers</key>
-				<integer>0</integer>
-				<key>modifiersubtext</key>
-				<string></string>
-				<key>vitoclose</key>
-				<false/>
-			</dict>
-			<dict>
-				<key>destinationuid</key>
 				<string>FAB606CA-AF3E-4839-83BB-64BE1710BF6E</string>
 				<key>modifiers</key>
 				<integer>0</integer>
@@ -116,29 +106,6 @@
 	<string>VSCode Workspace Explorer</string>
 	<key>objects</key>
 	<array>
-		<dict>
-			<key>config</key>
-			<dict>
-				<key>concurrently</key>
-				<false/>
-				<key>escaping</key>
-				<integer>102</integer>
-				<key>script</key>
-				<string>./AlfredWorkflowUpdater "Acidham/alfred-vscode-workspace-explorer" "1"</string>
-				<key>scriptargtype</key>
-				<integer>1</integer>
-				<key>scriptfile</key>
-				<string></string>
-				<key>type</key>
-				<integer>5</integer>
-			</dict>
-			<key>type</key>
-			<string>alfred.workflow.action.script</string>
-			<key>uid</key>
-			<string>A0CE7327-1CF8-45D3-97C5-E4BE466D5045</string>
-			<key>version</key>
-			<integer>2</integer>
-		</dict>
 		<dict>
 			<key>config</key>
 			<dict>
@@ -395,13 +362,6 @@ Search&amp;Browser VS Code Workspaces</string>
 			<key>ypos</key>
 			<real>250</real>
 		</dict>
-		<key>A0CE7327-1CF8-45D3-97C5-E4BE466D5045</key>
-		<dict>
-			<key>xpos</key>
-			<real>530</real>
-			<key>ypos</key>
-			<real>45</real>
-		</dict>
 		<key>F0F34B2F-091A-49DB-9E4D-B5D867B31A9E</key>
 		<dict>
 			<key>xpos</key>
@@ -449,7 +409,7 @@ Search&amp;Browser VS Code Workspaces</string>
 	<key>variablesdontexport</key>
 	<array/>
 	<key>version</key>
-	<string>0.9.5</string>
+	<string>0.9.6</string>
 	<key>webaddress</key>
 	<string></string>
 </dict>
