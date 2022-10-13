@@ -294,23 +294,6 @@
 			<key>version</key>
 			<integer>1</integer>
 		</dict>
-		<dict>
-			<key>config</key>
-			<dict>
-				<key>argument</key>
-				<string>'{query}', {variables}</string>
-				<key>cleardebuggertext</key>
-				<false/>
-				<key>processoutputs</key>
-				<true/>
-			</dict>
-			<key>type</key>
-			<string>alfred.workflow.utility.debug</string>
-			<key>uid</key>
-			<string>6B3799D0-47A0-43A7-9A71-DA84803C6304</string>
-			<key>version</key>
-			<integer>1</integer>
-		</dict>
 	</array>
 	<key>readme</key>
 	<string>Explore/open VSCode Workspaces
@@ -333,13 +316,6 @@ Search&amp;Browser VS Code Workspaces</string>
 			<real>845</real>
 			<key>ypos</key>
 			<real>175</real>
-		</dict>
-		<key>6B3799D0-47A0-43A7-9A71-DA84803C6304</key>
-		<dict>
-			<key>xpos</key>
-			<real>595</real>
-			<key>ypos</key>
-			<real>550</real>
 		</dict>
 		<key>6D127197-9285-4404-AEBE-1F4D32B3B721</key>
 		<dict>
