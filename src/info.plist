@@ -306,58 +306,58 @@ Search&amp;Browser VS Code Workspaces</string>
 		<key>1E4C47DC-9E0D-4CA7-9C58-BDBCAEBAFD19</key>
 		<dict>
 			<key>xpos</key>
-			<real>550</real>
+			<real>540</real>
 			<key>ypos</key>
-			<real>245</real>
+			<real>115</real>
 		</dict>
 		<key>69ED09D1-D034-4CEE-8A72-742ADCC2F5DB</key>
 		<dict>
 			<key>xpos</key>
-			<real>845</real>
+			<real>835</real>
 			<key>ypos</key>
-			<real>175</real>
+			<real>45</real>
 		</dict>
 		<key>6D127197-9285-4404-AEBE-1F4D32B3B721</key>
 		<dict>
 			<key>xpos</key>
-			<real>85</real>
+			<real>75</real>
 			<key>ypos</key>
-			<real>250</real>
+			<real>120</real>
 		</dict>
 		<key>6DBBB615-498F-4D84-9571-CB42B2B6718A</key>
 		<dict>
 			<key>xpos</key>
-			<real>715</real>
+			<real>705</real>
 			<key>ypos</key>
-			<real>265</real>
+			<real>135</real>
 		</dict>
 		<key>72D88578-E25F-46FB-A5F2-C8DDFDAAF29A</key>
 		<dict>
 			<key>xpos</key>
-			<real>285</real>
+			<real>275</real>
 			<key>ypos</key>
-			<real>250</real>
+			<real>120</real>
 		</dict>
 		<key>F0F34B2F-091A-49DB-9E4D-B5D867B31A9E</key>
 		<dict>
 			<key>xpos</key>
-			<real>550</real>
+			<real>540</real>
 			<key>ypos</key>
-			<real>420</real>
+			<real>290</real>
 		</dict>
 		<key>F6A299C3-A9B5-447F-8280-A0F821D0C66D</key>
 		<dict>
 			<key>xpos</key>
-			<real>845</real>
+			<real>835</real>
 			<key>ypos</key>
-			<real>305</real>
+			<real>175</real>
 		</dict>
 		<key>FAB606CA-AF3E-4839-83BB-64BE1710BF6E</key>
 		<dict>
 			<key>xpos</key>
-			<real>480</real>
+			<real>470</real>
 			<key>ypos</key>
-			<real>275</real>
+			<real>145</real>
 		</dict>
 	</dict>
 	<key>userconfigurationconfig</key>
@@ -369,6 +369,8 @@ Search&amp;Browser VS Code Workspaces</string>
 				<string></string>
 				<key>filtermode</key>
 				<integer>1</integer>
+				<key>placeholder</key>
+				<string></string>
 				<key>required</key>
 				<true/>
 			</dict>
@@ -385,7 +387,7 @@ Search&amp;Browser VS Code Workspaces</string>
 	<key>variablesdontexport</key>
 	<array/>
 	<key>version</key>
-	<string>0.9.7</string>
+	<string>1.0.0</string>
 	<key>webaddress</key>
 	<string></string>
 </dict>
